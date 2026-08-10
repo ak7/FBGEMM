@@ -203,6 +203,7 @@ __configure_fbgemm_gpu_build_docs () {
 
 __configure_fbgemm_gpu_build_rocm () {
   local fbgemm_variant_targets="$1"
+  local rocm_version_arr=(${BUILD_ROCM_VERSION//./ })
 
   # By default, we build for a limited number of target architectures to save on
   # build time.  This list needs to be updated if the CI ROCm machines have
